@@ -1,6 +1,6 @@
 #!/bin/bash
+cd ~/
 sudo yum install -y unzip wget
-cd ~
 wget https://github.com/haozi/shadowsocksr/archive/manyuser.zip
 unzip manyuser.zip
 rm manyuser.zip
@@ -8,7 +8,7 @@ mv shadowsocksr-manyuser shadowsocksr
 cd ~/shadowsocksr
 sh ./initcfg.sh
 rm user-config.json
-wget https://raw.githubusercontent.com/haozi/shadowsocksr/sh/user-config.json
+curl https://raw.githubusercontent.com/haozi/shadowsocksr/sh/user-config.json -o user-config.json
 
 echo "sudo /bin/bash /home/ec2-user/shadowsocksr/shadowsocks/logrun.sh" | sudo tee -a /etc/rc.d/rc.local
 sudo chmod +x /etc/rc.d/rc.local

@@ -33,3 +33,4 @@ htmlcov
 # Ignore user config
 userapiconfig.py
 usermysql.json
+git.sh
