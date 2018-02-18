@@ -20,7 +20,7 @@ echo 3 | sudo tee /proc/sys/net/ipv4/tcp_fastopen
 sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 sudo yum -y --enablerepo=elrepo-kernel install kernel-ml
-sudo grub2-set-default 0``
+sudo grub2-set-default 0
 
 echo 'net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr' | sudo tee -a /etc/sysctl.conf
