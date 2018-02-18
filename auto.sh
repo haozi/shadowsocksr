@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ~/
 sudo yum install -y unzip wget
-wget https://github.com/haozi/shadowsocksr/archive/manyuser.zip
+curl -LOk  https://github.com/haozi/shadowsocksr/archive/manyuser.zip
 unzip manyuser.zip
 rm manyuser.zip
 mv shadowsocksr-manyuser shadowsocksr
